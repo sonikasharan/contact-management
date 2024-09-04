@@ -20,7 +20,10 @@ const Sidebar: React.FC = () => {
       <div className="p-4">
         <ul className="space-y-2">
           <li>
-            <Link to="/" className={`block p-3 rounded-md ${isActive("/")}`}>
+            <Link
+              to="/contact"
+              className={`block p-3 rounded-md ${isActive("/contact")}`}
+            >
               Contact
             </Link>
           </li>

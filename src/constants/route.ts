@@ -1,4 +1,4 @@
 export const ROUTES = {
-  CONTACT: "/",
+  CONTACT: "/contact",
   CHARTS_AND_MAPS: "/chartsAndMap",
 };

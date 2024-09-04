@@ -13,6 +13,7 @@
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "chart.js": "^4.4.4",
+    "gh-pages": "^6.1.1",
     "leaflet": "^1.9.4",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
@@ -31,8 +32,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://sonikasharan.github.io/contact-management",
   "eslintConfig": {
     "extends": [
       "react-app",
