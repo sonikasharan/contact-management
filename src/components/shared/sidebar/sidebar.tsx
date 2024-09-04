@@ -21,10 +21,8 @@ const Sidebar: React.FC = () => {
         <ul className="space-y-2">
           <li>
             <Link
-              to="/contact-management"
-              className={`block p-3 rounded-md ${isActive(
-                "/contact-management"
-              )}`}
+              to="/contact"
+              className={`block p-3 rounded-md ${isActive("/contact")}`}
             >
               Contact
             </Link>

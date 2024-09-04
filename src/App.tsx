@@ -14,18 +14,15 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <QueryClientProvider client={queryClient}>
-          <BrowserRouter>
+          <BrowserRouter basename="/contact-management">
             <div className="flex flex-col h-screen max-h-screen">
               <Navbar />
               <div className="flex flex-grow h-full w-full">
                 <Sidebar />
                 <div className="flex-grow p-4 w-full">
                   <Routes>
-                    <Route
-                      path="/"
-                      element={<Navigate to="/contact-management" />}
-                    />
-                    <Route path="/contact-management" element={<Contact />} />
+                    <Route path="/" element={<Navigate to="/contact" />} />
+                    <Route path="/contact" element={<Contact />} />
 
                     <Route path="/chartsAndMap" element={<ChartsAndMaps />} />
                   </Routes>
