@@ -55,7 +55,6 @@ const LineChart: React.FC<LineChartData> = ({ historicalData }) => {
     responsive: true,
     maintainAspectRatio: false,
   };
-  console.log("chartData", chartData);
 
   return (
     <div className="h-full w-full py-6 px-3 relative border-2  rounded-md">
