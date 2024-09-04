@@ -15,7 +15,7 @@ const Sidebar: React.FC = () => {
     <div
       className={`${
         isSidebarVisible ? "block" : "hidden"
-      } absolute top-10 w-64 left-0 lg:relative lg:top-0  h-full bg-gray-800 text-white py-4`}
+      } z-50 absolute top-10 w-64 left-0 lg:relative lg:top-0  h-full bg-gray-800 text-white py-4`}
     >
       <div className="p-4">
         <ul className="space-y-2">

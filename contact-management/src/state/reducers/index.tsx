@@ -1,18 +1,18 @@
 import { combineReducers } from "redux";
-import tableReducer from "./tableReducer";
 import SidebarToggleStateReducer from "./sidebarToggleReducer";
 import UpdateContactFormsReducer from "./contactFormReducer";
+import UpdateGraphAndMapDataReducer from "./updateGraphAndMapReducesData";
 
 interface RootState {
-  table: ReturnType<typeof tableReducer>;
   sidebarToggleState: ReturnType<typeof SidebarToggleStateReducer>;
   contactForms: ReturnType<typeof UpdateContactFormsReducer>;
+  graphAndMapData: ReturnType<typeof UpdateGraphAndMapDataReducer>;
 }
 
 const reducers = combineReducers<RootState>({
-  table: tableReducer,
   sidebarToggleState: SidebarToggleStateReducer,
   contactForms: UpdateContactFormsReducer,
+  graphAndMapData: UpdateGraphAndMapDataReducer,
 });
 
 export default reducers;

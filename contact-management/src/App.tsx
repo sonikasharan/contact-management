@@ -6,25 +6,30 @@ import Navbar from "./components/shared/navbar/navbar";
 import Contact from "./components/pages/contact";
 import ChartsAndMaps from "./components/pages/chartAndMaps";
 import Sidebar from "./components/shared/sidebar/sidebar";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 function App() {
+  const queryClient = new QueryClient();
   return (
     <div className="App">
       <Provider store={store}>
-        <BrowserRouter>
-          <div className="flex flex-col h-screen">
-            <Navbar />
-            <div className="flex flex-grow h-full">
-              <Sidebar />
-              <div className="flex-grow p-4">
-                <Routes>
-                  <Route path="/" element={<Contact />} />
-                  <Route path="/chartsAndMap" element={<ChartsAndMaps />} />
-                </Routes>
+        <QueryClientProvider client={queryClient}>
+          <BrowserRouter>
+            <div className="flex flex-col h-screen max-h-screen">
+              <Navbar />
+              <div className="flex flex-grow h-full w-full">
+                <Sidebar />
+                <div className="flex-grow p-4 w-full">
+                  <Routes>
+                    <Route path="/" element={<Contact />} />
+
+                    <Route path="/chartsAndMap" element={<ChartsAndMaps />} />
+                  </Routes>
+                </div>
               </div>
             </div>
-          </div>
-        </BrowserRouter>
+          </BrowserRouter>
+        </QueryClientProvider>
       </Provider>
     </div>
   );

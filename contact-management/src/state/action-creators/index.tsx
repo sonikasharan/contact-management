@@ -1,10 +1,5 @@
 import { Dispatch } from "react";
 
-interface UpdateTableAction {
-  type: "updateTable";
-  payload: any;
-}
-
 interface UpdateSidebarToggleAction {
   type: "updateSidebarToggleState";
   payload: boolean;
@@ -15,20 +10,18 @@ interface UpdateContactAction {
   payload: any;
 }
 
-type UpdateTableDispatch = (dispatch: Dispatch<UpdateTableAction>) => void;
+interface UpdateGraphAndMapAction {
+  type: "updateGraphAndMapData";
+  payload: any;
+}
+
 type UpdateSidebarToggleStateDispatch = (
   dispatch: Dispatch<UpdateSidebarToggleAction>
 ) => void;
 type UpdateContactDispatch = (dispatch: Dispatch<UpdateContactAction>) => void;
-
-export const updateTable = (tableData: any): UpdateTableDispatch => {
-  return (dispatch) => {
-    dispatch({
-      type: "updateTable",
-      payload: tableData,
-    });
-  };
-};
+type UpdateGraphAndMapDispatch = (
+  dispatch: Dispatch<UpdateGraphAndMapAction>
+) => void;
 
 export const updateSidebarToggleState = (
   isSidebarOpen: boolean
@@ -45,6 +38,17 @@ export const updateContactForms = (payload: any): UpdateContactDispatch => {
   return (dispatch) => {
     dispatch({
       type: "updateContactForms",
+      payload: payload,
+    });
+  };
+};
+
+export const updateGraphAndMapData = (
+  payload: any
+): UpdateGraphAndMapDispatch => {
+  return (dispatch) => {
+    dispatch({
+      type: "updateGraphAndMapData",
       payload: payload,
     });
   };
