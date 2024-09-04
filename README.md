@@ -1,6 +1,6 @@
 # **Contact Management**
 
-This project is a contact management application built using React. It fetches real-time COVID-19 data from the disease.Uses Visualizes it using charts and maps.
+This project is a contact management application built using React. It fetches real-time COVID-19 data from the disease api and Visualizes it using charts and maps .It also has a contact form with crud operations.It is fully responsive.
 
 **Features**
 
