@@ -14,7 +14,7 @@ function App() {
         <BrowserRouter>
           <div className="flex flex-col h-screen">
             <Navbar />
-            <div className="flex flex-grow">
+            <div className="flex flex-grow h-full">
               <Sidebar />
               <div className="flex-grow p-4">
                 <Routes>

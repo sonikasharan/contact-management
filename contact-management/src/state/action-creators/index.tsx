@@ -10,10 +10,16 @@ interface UpdateSidebarToggleAction {
   payload: boolean;
 }
 
+interface UpdateContactAction {
+  type: "updateContactForms";
+  payload: any;
+}
+
 type UpdateTableDispatch = (dispatch: Dispatch<UpdateTableAction>) => void;
 type UpdateSidebarToggleStateDispatch = (
   dispatch: Dispatch<UpdateSidebarToggleAction>
 ) => void;
+type UpdateContactDispatch = (dispatch: Dispatch<UpdateContactAction>) => void;
 
 export const updateTable = (tableData: any): UpdateTableDispatch => {
   return (dispatch) => {
@@ -31,6 +37,15 @@ export const updateSidebarToggleState = (
     dispatch({
       type: "updateSidebarToggleState",
       payload: isSidebarOpen,
+    });
+  };
+};
+
+export const updateContactForms = (payload: any): UpdateContactDispatch => {
+  return (dispatch) => {
+    dispatch({
+      type: "updateContactForms",
+      payload: payload,
     });
   };
 };

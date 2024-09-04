@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4 w-full text-white border-b-[1px] border-white/40 z-50">
+    <nav className="bg-gray-800 p-4 w-full text-white border-b-[1px] border-white/40 z-50 sticky top-0">
       <div className="w-full px-2 flex justify-between items-center">
         <button className="h-6 w-6" onClick={handleButtonClick}>
           <img

@@ -1,7 +1,7 @@
 type SidebarToggleState = any;
 
 const SidebarToggleStateReducer = (
-  state: SidebarToggleState = false,
+  state: SidebarToggleState = true,
   action: any
 ): SidebarToggleState => {
   if (action.type === "updateSidebarToggleState") {
