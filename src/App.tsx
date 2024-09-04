@@ -21,8 +21,11 @@ function App() {
                 <Sidebar />
                 <div className="flex-grow p-4 w-full">
                   <Routes>
-                    <Route path="/" element={<Navigate to="/contact" />} />
-                    <Route path="/contact" element={<Contact />} />
+                    <Route
+                      path="/"
+                      element={<Navigate to="/contact-management" />}
+                    />
+                    <Route path="/contact-management" element={<Contact />} />
 
                     <Route path="/chartsAndMap" element={<ChartsAndMaps />} />
                   </Routes>
