@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sonikasharan/contact-management/static/css/main.47b555d8.css",
+    "main.js": "/sonikasharan/contact-management/static/js/main.3365d48e.js",
+    "static/js/453.7ea623f2.chunk.js": "/sonikasharan/contact-management/static/js/453.7ea623f2.chunk.js",
+    "index.html": "/sonikasharan/contact-management/index.html",
+    "main.47b555d8.css.map": "/sonikasharan/contact-management/static/css/main.47b555d8.css.map",
+    "main.3365d48e.js.map": "/sonikasharan/contact-management/static/js/main.3365d48e.js.map",
+    "453.7ea623f2.chunk.js.map": "/sonikasharan/contact-management/static/js/453.7ea623f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.47b555d8.css",
+    "static/js/main.3365d48e.js"
+  ]
+}
