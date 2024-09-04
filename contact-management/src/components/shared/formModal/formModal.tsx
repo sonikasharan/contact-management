@@ -40,6 +40,7 @@ const FormModal: React.FC<ModalProps> = ({
     onClose();
   };
 
+  //Check if form is valid or not
   useEffect(() => {
     const isFormValid =
       formData.firstName.trim() !== "" &&

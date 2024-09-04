@@ -5,9 +5,6 @@ import {
   fetchWorldData,
 } from "../../utils/api";
 import { useQuery } from "react-query";
-import { useDispatch, useSelector } from "react-redux";
-import { bindActionCreators } from "@reduxjs/toolkit";
-import { actionCreators } from "../../state";
 import MapComponent from "../shared/map/map";
 import LineChart from "../shared/linechart/linechart";
 
@@ -40,6 +37,7 @@ const ChartsAndMaps: React.FC = () => {
     setGraphData({ worldData, countryData, historicalData });
   }, [worldData, countryData, historicalData]);
 
+  //If loading state will show loader
   if (isLoadingWorld || isLoadingCountry || isLoadingHistorical) {
     return <div>Loading...</div>;
   }

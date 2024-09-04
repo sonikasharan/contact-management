@@ -4,7 +4,6 @@ interface ContactCardProps {
   firstName: string;
   lastName: string;
   status: string;
-  id: number;
   onDelete: () => void;
   onUpdate: () => void;
 }
@@ -13,7 +12,6 @@ const ContactCard: React.FC<ContactCardProps> = ({
   firstName,
   lastName,
   status,
-  id,
   onDelete,
   onUpdate,
 }) => {

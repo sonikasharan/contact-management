@@ -16,13 +16,14 @@ interface FormData {
 
 const Contact: React.FC = () => {
   const dispatch = useDispatch();
-  const contactForms = useSelector((state: any) => state.contactForms);
   const swalPopup = withReactContent(Swal);
-  const [allContactForms, setAllContactForms] = useState<any>(contactForms);
+  const contactForms = useSelector((state: any) => state.contactForms);
   const { updateContactForms } = bindActionCreators(actionCreators, dispatch);
+  const [allContactForms, setAllContactForms] = useState<any>(contactForms);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editData, setEditData] = useState<FormData | null>(null);
 
+  //For Alerts
   const alert = (type: string, message: string, title: string) => {
     if (type === "error") {
       swalPopup.fire({
@@ -50,6 +51,7 @@ const Contact: React.FC = () => {
     setIsModalOpen(false);
   };
 
+  //handle edit and create can be optimized further
   const handleSubmit = (data: FormData) => {
     if (editData) {
       setAllContactForms((prevForms: any) =>
@@ -134,7 +136,6 @@ const Contact: React.FC = () => {
                   <ContactCard
                     firstName={item.firstName}
                     lastName={item.lastName}
-                    id={item.id}
                     status={item.status}
                     onDelete={() => handleDelete(item.id)}
                     onUpdate={() => {
